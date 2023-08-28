@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+        ミリシタ簡易電卓
+    </title>
+
+    <script>
+      function OnButtonClick(){
+        var stamina = document.getElementById("stamina").value;
+        var sd10 = document.getElementById("sd10").value;
+        var sd20 = document.getElementById("sd20").value;
+        var sd30 = document.getElementById("sd30").value;
+        var sdmax = document.getElementById("sdmax").value;
+
+        if (stamina > 240){
+          alert("元気の上限は240です");
+          return 0;
+        } else {
+          var jewel = 50*(Math.floor((10*sd10 + 20*sd20 + 30*sd30 + stamina*sdmax)/stamina));
+          var surplus = (10*sd10 + 20*sd20 + 30*sd30 + stamina*sdmax)%stamina;
+          var target = document.getElementById("output");
+          target.innerHTML = 'ミリオンジュエル：'+jewel+'個に相当。余った元気：'+surplus;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>
+        <h1>
+            ミリシタ簡易電卓
+        </h1>
+        <form name="form1" id="form1">
+            <label for="stamina">元気最大値：</label>
+            <input type="number" id="stamina" name="stamina">
+            <br>
+            <label for="sd10">スパドリ10：</label>
+            <input type="number" id="sd10" name="sd10">
+            <br>
+            <label for="sd20">スパドリ20：</label>
+            <input type="number" id="sd20" name="sd20">
+            <br>
+            <label for="sd30">スパドリ30：</label>
+            <input type="number" id="sd30" name="sd30">
+            <br>
+            <label for="sdmax">スパドリMAX：</label>
+            <input type="number" id="sdmax" name="sdmax">
+            <p>ボタンを押すと下に結果が表示されます。</p>
+            <input type="button" id="button1" value="ジュエルに変換" onclick="OnButtonClick()">
+        </form>
+    </div>
+    <br>
+    <div id="output">
+    </div>
+  </body>
+</html>
