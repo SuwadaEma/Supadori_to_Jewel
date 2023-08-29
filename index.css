@@ -1,0 +1,50 @@
+html {
+  font-size: 10pt
+}
+
+@media screen and (min-width: 576px) {
+  html {
+      font-size:10.5pt
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+      font-size:11pt
+  }
+}
+
+.header {
+  background-color: #e9739b;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header__inner {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  position: relative;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 50px;
+}
+
+label{
+  display: inline-block;
+  text-align: right;
+  width: 150px;
+}
