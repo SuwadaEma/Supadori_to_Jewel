@@ -1,3 +1,7 @@
-# daemaru.giuhub.io
+# ジュエル換算器：スパークドリンクをジュエルに換算します。
+※注意点  
+・元気上限は60から240までの数値を入力してください  
+※TIPS  
+・PLvが上がるほど（=元気上限が増えるほど）スパークドリンクの価値は相対的に低くなります
 
-## demo: https://suwadaema.github.io/Supadori_to_Jewel/
+### demo: https://suwadaema.github.io/Supadori_to_Jewel/
